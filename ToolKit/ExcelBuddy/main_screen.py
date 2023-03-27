@@ -2,10 +2,10 @@ import tkinter as tk
 import subprocess
 
 def open_split_excel():
-    subprocess.Popen(["python3", "ExcelBuddy/split_excel_gui.py"])
+    subprocess.Popen(["python3", "ToolKit/ExcelBuddy/split_excel_gui.py"])
 
 def open_sftp_que_upload():
-    subprocess.Popen(["python3", "ExcelBuddy/que_sftp_gui.py"])
+    subprocess.Popen(["python3", "ToolKit/ExcelBuddy/que_sftp_gui.py"])
 
 window = tk.Tk()
 window.title("Excel Buddy")
