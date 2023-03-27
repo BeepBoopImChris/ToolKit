@@ -2,6 +2,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 from modules.sftp_que_func import sftp_que_func
+from modules.sftp_progress_window import SftpUploadProgress
 import time
 
 class SftpUploader:
@@ -96,6 +97,10 @@ class SftpUploader:
             result_message += f"\n{num_files_failed} files failed to upload."
 
         messagebox.showinfo("Info", result_message)
+        
+        # Open progress window after upload is complete
+        SftpUploadProgress(username)
+
 
 if __name__ == "__main__":
     root = tk.Tk()
